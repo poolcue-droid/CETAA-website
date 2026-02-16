@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CETAA Website</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#f4f6fb;color:#1d2a44}
+
+/* TOP BAR */
+.topbar{background:#1f3c6e;color:#fff;padding:8px 8vw;font-size:13px;display:flex;justify-content:space-between}
+
+/* NAVBAR */
+header{background:white;box-shadow:0 3px 10px rgba(0,0,0,0.05)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8vw}
+nav h2{font-weight:700;color:#1f3c6e}
+nav a{margin-left:25px;text-decoration:none;color:#444;font-weight:500}
+nav a:hover{color:#1f3c6e}
+
+/* HERO */
+.hero{height:520px;background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/College_of_Engineering_Trivandrum.jpg/1400px-College_of_Engineering_Trivandrum.jpg') center/cover no-repeat;position:relative;display:flex;align-items:center}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(31,60,110,0.9),rgba(31,60,110,0.4))}
+.hero-content{position:relative;color:white;padding:0 8vw;max-width:600px}
+.hero h1{font-size:3rem;margin-top:10px}
+.hero p{margin-top:15px;opacity:.9}
+.hero button{margin-top:20px;padding:12px 25px;border:none;background:#38b36c;color:white;border-radius:4px;font-weight:600}
+
+/* ICON STRIP */
+.icons{background:white;margin-top:-50px;margin-left:8vw;margin-right:8vw;border-radius:8px;display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 10px 25px rgba(0,0,0,0.08)}
+.icons div{text-align:center;padding:25px;border-right:1px solid #eee}
+.icons div:last-child{border-right:none}
+
+/* FEATURE SECTION */
+.section{padding:70px 8vw}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.feature-img img{width:100%;border-radius:6px}
+.feature-box{background:#1f3c6e;color:white;padding:35px;border-radius:6px}
+.feature-box h3{margin-bottom:10px}
+
+/* ABOUT STRIP */
+.about{background:#1f3c6e;color:white;padding:60px 8vw}
+.about h2{margin-bottom:15px}
+
+/* SERVICES */
+.services{background:#162c52;color:white;padding:60px 8vw}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;margin-top:30px}
+.services-grid div{opacity:.9}
+
+/* PAGE 2 RENOVATION */
+.renovation{padding:70px 8vw;background:#f4f6fb}
+.renovation h2{text-align:center;margin-bottom:40px}
+.reno-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}
+.card{background:white;border-radius:8px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+.card img{width:100%;height:170px;object-fit:cover}
+.card div{padding:18px}
+
+/* DONATE */
+.donate{background:#1f3c6e;color:white;text-align:center;padding:60px 8vw}
+.donate button{margin-top:20px;padding:12px 30px;border:none;background:#38b36c;color:white;font-weight:600;border-radius:4px}
+
+footer{background:#0f1e3a;color:white;text-align:center;padding:20px}
+
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(40px);transition:all .8s ease}
+.fade-up.show{opacity:1;transform:translateY(0)}
+
+.hero-content{animation:fadeHero 1.2s ease forwards}
+@keyframes fadeHero{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+.card,.icons div,.feature-img,.feature-box,.services-grid div{transition:transform .4s ease, box-shadow .4s ease}
+.card:hover,.services-grid div:hover{transform:translateY(-6px);box-shadow:0 12px 25px rgba(0,0,0,0.15)}
+
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+<span>CET Alumni Association</span>
+<span>Connecting CETians Worldwide</span>
+</div>
+
+<header>
+<nav>
+<h2>CETAA</h2>
+<div>
+<a href="#">Home</a>
+<a href="#renovation">Renovation</a>
+</div>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
+<p>The Pride of Kerala Engineering</p>
+<h1>College of Engineering Trivandrum Alumni</h1>
+<p>A global network of innovators, leaders and changemakers.</p>
+<button onclick="location.href='#renovation'">Support Renovation</button>
+</div>
+</section>
+
+<!-- ICON STRIP -->
+<div class="icons fade-up">
+<div><strong>Alumni Life</strong><br><small>Global Network</small></div>
+<div><strong>Mentorship</strong><br><small>Student Support</small></div>
+<div><strong>Events</strong><br><small>Reunions</small></div>
+<div><strong>Impact</strong><br><small>Giving Back</small></div>
+</div>
+
+<!-- FEATURE -->
+<section class="section fade-up">
+<div class="grid">
+<div class="feature-img">
+<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1">
+</div>
+<div class="feature-box">
+<h3>Apply Impact Through Alumni</h3>
+<p>CETAA enables alumni to contribute through scholarships, mentorship and infrastructure development that empowers future engineers.</p>
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about fade-up">
+<h2>About CETAA</h2>
+<p>We are one of the strongest alumni communities in India, connecting generations of engineers from the College of Engineering Trivandrum across the globe. Through initiatives in education, innovation and infrastructure, CETAA continues to give back to its alma mater.</p>
+</section>
+
+<!-- SERVICES -->
+<section class="services fade-up">
+<h2>Our Contributions</h2>
+<div class="services-grid">
+<div>Scholarships</div>
+<div>International Chapters</div>
+<div>Academic Support</div>
+<div>Campus Development</div>
+</div>
+</section>
+
+<!-- PAGE 2 RENOVATION -->
+<section class="renovation fade-up" id="renovation">
+<h2>CETAA Renovation Initiative</h2>
+<div class="reno-grid">
+<div class="card">
+<img src="CETAAHALLproposed.PNG">
+<div><strong>CETAA Hall</strong><p>Modern interiors and upgraded facilities.</p></div>
+</div>
+<div class="card">
+<img src="receptionareaproposed.PNG">
+<div><strong>Reception Area</strong><p>Welcoming redesigned entrance.</p></div>
+</div>
+<div class="card">
+<img src="CETAAofficecurrent.PNG">
+<div><strong>CETAA Office</strong><p>Optimized collaborative workspace.</p></div>
+</div>
+<div class="card">
+<img src="rampcurrent.PNG">
+<div><strong>Accessible Ramp</strong><p>Inclusive universal access redesign.</p></div>
+</div>
+</div>
+</section>
+
+<section class="donate">
+<h2>Support the Transformation</h2>
+<p>We invite alumni worldwide to contribute and be part of this legacy project.</p>
+<button>Donate Now</button>
+</section>
+
+<footer>
+© 2026 CETAA — College of Engineering Trivandrum Alumni Association
+</footer>
+
+
+<script>
+// Scroll reveal animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.15});
+
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
